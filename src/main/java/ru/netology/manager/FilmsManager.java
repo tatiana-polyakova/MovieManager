@@ -27,8 +27,8 @@ public class FilmsManager {
         infos = tmp;
     }
 
-    public int getArrayLenght() {
-        return infos.length;
+    public FilmInfo[] getAll(){
+        return infos;
     }
 
     public FilmInfo[] returnLastFilms() {
