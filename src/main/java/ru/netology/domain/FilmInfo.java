@@ -1,14 +1,14 @@
 package ru.netology.domain;
 
 public class FilmInfo {
-    private int FilmId;
-    private String FilmName;
+    private int filmId;
+    private String filmName;
 
     public FilmInfo() {
     }
 
     public FilmInfo(int filmId, String filmName) {
-        FilmId = filmId;
-        FilmName = filmName;
+        this.filmId = filmId;
+        this.filmName = filmName;
     }
 }

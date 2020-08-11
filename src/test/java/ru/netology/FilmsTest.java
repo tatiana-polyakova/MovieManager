@@ -11,15 +11,15 @@ public class FilmsTest {
     FilmsManager manager;
     FilmInfo film0 = new FilmInfo(); // for default constructor testing coverage
     FilmInfo film1 = new FilmInfo(1, "Фильм 1");
-    FilmInfo film2 = new FilmInfo(1, "Фильм 2");
-    FilmInfo film3 = new FilmInfo(1, "Фильм 3");
-    FilmInfo film4 = new FilmInfo(1, "Фильм 4");
-    FilmInfo film5 = new FilmInfo(1, "Фильм 5");
-    FilmInfo film6 = new FilmInfo(1, "Фильм 6");
-    FilmInfo film7 = new FilmInfo(1, "Фильм 7");
-    FilmInfo film8 = new FilmInfo(1, "Фильм 7");
-    FilmInfo film9 = new FilmInfo(1, "Фильм 9");
-    FilmInfo film10 = new FilmInfo(1, "Фильм 10");
+    FilmInfo film2 = new FilmInfo(2, "Фильм 2");
+    FilmInfo film3 = new FilmInfo(3, "Фильм 3");
+    FilmInfo film4 = new FilmInfo(4, "Фильм 4");
+    FilmInfo film5 = new FilmInfo(5, "Фильм 5");
+    FilmInfo film6 = new FilmInfo(6, "Фильм 6");
+    FilmInfo film7 = new FilmInfo(7, "Фильм 7");
+    FilmInfo film8 = new FilmInfo(8, "Фильм 7");
+    FilmInfo film9 = new FilmInfo(9, "Фильм 9");
+    FilmInfo film10 = new FilmInfo(10, "Фильм 10");
 
     @Test
     void ifAddFilmFilmAdded() {
