@@ -2,36 +2,26 @@ package ru.netology.manager;
 
 import lombok.NoArgsConstructor;
 import ru.netology.domain.FilmInfo;
+import ru.netology.repository.AfishaRepository;
 
-@NoArgsConstructor
-public class FilmsManager {
-    private FilmInfo[] infos = new FilmInfo[0];
+public class AfishaManager {
+    private AfishaRepository repository;
     private int variableQuantity = 10;
 
-    public FilmsManager(int variableQuantity) {
-        if (variableQuantity <= 0) {
-            return;
-        }
-        this.variableQuantity = variableQuantity;
+    public AfishaManager(AfishaRepository repository) {
+        this.repository = repository;
     }
 
     public void add(FilmInfo info) {
-        int length = infos.length + 1;
-        FilmInfo[] tmp = new FilmInfo[length];
-
-        for (int i = 0; i < infos.length; i++) {
-            tmp[i] = infos[i];
-        }
-        int lastIndex = tmp.length - 1;
-        tmp[lastIndex] = info;
-        infos = tmp;
+        repository.save(info);
     }
 
-    public FilmInfo[] getAll(){
-        return infos;
+    public FilmInfo[] findAll() {
+        return repository.findAll();
     }
 
     public FilmInfo[] returnLastFilms() {
+        FilmInfo[] infos = findAll();
         int realLastFilmsCount = Math.min(infos.length, variableQuantity);
 
         FilmInfo[] lastFilms = new FilmInfo[realLastFilmsCount];
@@ -43,5 +33,9 @@ public class FilmsManager {
             takenFilmsCount = takenFilmsCount + 1;
         }
         return lastFilms;
+    }
+
+    public void removeAll() {
+        repository.removeAll();
     }
 }
